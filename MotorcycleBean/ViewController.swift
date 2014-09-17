@@ -2,11 +2,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let motorcycleBeanManager = BeanManagerDelegate();
-                            
+    let motorcycleBeanManagerDelegate = BeanManagerDelegate();
+    var beanManager : PTDBeanManager?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        var beanManager = PTDBeanManager(delegate: motorcycleBeanManager);
+        beanManager = PTDBeanManager(delegate: motorcycleBeanManagerDelegate)
     }
 
     override func didReceiveMemoryWarning() {

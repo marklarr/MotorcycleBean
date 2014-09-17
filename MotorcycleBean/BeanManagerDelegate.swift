@@ -13,7 +13,7 @@ class BeanManagerDelegate: NSObject, PTDBeanManagerDelegate {
     }
 
     func BeanManager(beanManager: PTDBeanManager!, didDisconnectBean bean: PTDBean!, error: NSError!) {
-
+        NSLog(bean.name)
     }
 
     func BeanManager(beanManager: PTDBeanManager!, didConnectToBean bean: PTDBean!, error: NSError!) {
